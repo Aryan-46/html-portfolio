@@ -1,0 +1,521 @@
+@font-face {
+    font-family: heroeau;
+    src: url(heroeau.ttf);
+}
+
+:root{
+    --background-color  :#000000;
+    --heading-color : #E3FDFD;
+    --side-heading : #393E46;
+    --text-color : #fff;
+    --line-color : #27272a;
+    --animation1st-color : #000e6c;
+    --animation2nd-color : #000841;
+}
+
+.light_theme{
+    --background-color  :#f9f9f9;
+    --heading-color : #543310;
+    --side-heading : #74512D;
+    --text-color : #561C24;
+    --line-color : #AF8F6F;
+    --animation1st-color : #609966;
+    --animation2nd-color : #9DC08B;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.circle:hover {
+    animation: pulse 2s infinite;
+}
+
+
+.circle {
+    position: absolute;
+    width: 720px; /* Set the width of the circle */
+    height: 720px; /* Set the height of the circle (same as width for a perfect circle) */
+    background: rgb(255,0,0);
+    background: radial-gradient(circle, var(--animation1st-color) 20%, var(--animation2nd-color) 30%, var(--background-color) 50%);
+    border-radius: 50%; /* Makes the shape a circle */
+    top: 0;
+    left: 0;
+    margin-left: 450px;
+    margin-top: 50px;
+    z-index: -1;
+    animation: pulse 2s infinite;
+}
+
+
+
+body {
+    background-color: var(--background-color);
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.vertical {
+    border-left: 2px solid var(--line-color);
+    height: 100%;
+    position: fixed;
+    margin-left: 140px;
+    top: 0;
+    z-index: 1000;
+}
+
+.vertical-dot {
+    border-left: 3px dashed var(--line-color);
+    height: 100%;
+    position: fixed;
+    margin-left: 135px;
+    top: 0;
+    z-index: 1000;
+} 
+
+.vertical-internal{
+    border-left: 2px solid var(--line-color);
+    height: calc(100vh - 760px);
+    position: absolute;
+    left: 450px;
+    top: 760px;
+    z-index: 1000;
+}
+
+
+.horizontal {
+    width: 90%;
+    height: 5px;
+    border-top: 2px solid var(--line-color);
+    line-height: 80%;
+    margin-left: 140px;
+    margin-top: 20px;
+}
+
+.gradiant{
+    position: absolute;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+
+.shape1{
+    color: aqua;
+    height: 300px;
+    width: 300px;
+    position: relative;
+}
+
+.top-rectangle {
+    width: 100%; /* Full width of the page */
+    height: 50px; /* Adjust the height as needed */
+    background-color: var(--background-color); /* Change to your desired color */
+    position: fixed; /* Fix it at the top of the page */
+    top: 0; /* Aligns it to the top */
+    left: 0; /* Ensures it starts from the left */
+    z-index: 999; /* Ensures it appears above other content */
+    padding-bottom: 10px;
+    border-bottom: #393E46;
+
+}
+
+.rect-tab{
+    width: 100%; /* Full width of the page */
+    height: 50px; /* Adjust the height as needed */
+    background-color: var(--background-color); /* Change to your desired color */
+    position: relative; /* Fix it at the top of the page */
+    z-index: -1; /* Ensures it appears above other content */
+    margin-bottom: 0;
+
+}
+.open-nav {
+    position: fixed;
+    display: flex;
+    gap: 20px;
+    margin-left: 200px;
+    margin-top: 30px;
+    margin-bottom: 20px; 
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 300;
+    padding-bottom: 2px; /* Space for the border */
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+    border-bottom: 2px solid var(--text-color);
+}
+
+
+.intro{
+    display: flex;
+    margin-top: 200px  ;
+}
+.name {
+    margin-top: 100px;
+    margin-left: 220px;              /* Center text within the element */
+    color: var(--heading-color);                  /* Text color */
+    font-family: "Italiana", serif;  /* Font family */
+    font-weight: 250;                 /* Font weight */
+    font-style: normal;               /* Font style */
+    font-size: 120px;                 /* Font size */                 /* Center the element itself */
+    display: inline-block;                   /* Ensure the element is a block for margin to work */
+    width: fit-content;               /* Adjust width to fit the content */
+}
+
+.you {
+    display: inline;
+    margin-left: 15px;
+    margin-top: 60px;
+    width: 200px; 
+    height: 200px;/* Adjust the width as per your requirement */
+    max-height: 100%;
+    max-width: 100%; /* Ensure the image remains responsive *//* Optional: to ensure the image is responsive */
+    border-radius: 340%; /* Makes the image circular */
+    
+}
+
+.brief {
+    font-size: 15px;
+    color: var(--text-color);
+    font-family: "Montserrat", sans-serif;
+    margin-left: 220px;/* Centers the text horizontally */
+    max-width: 800px; /* Limits the width of the paragraph for better readability */
+    line-height: 1.6; /* Improves line spacing */
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.about_me {
+    color: var(--text-color);
+    font-family:  "Montserrat", sans-serif;
+    margin-left: 200px;
+    margin-right: 50px;
+    line-height: 2;         
+    letter-spacing: 0.5px;    
+}
+
+p.info{
+    font-size: 20px;
+    width: 900px;
+}
+
+img.trip1{
+    position: absolute;
+    height: 200px;
+    width: 150px;
+    margin-left: 1200px;
+    margin-top: -300px;
+    border-radius: 5px;
+    
+}
+img.trip2{
+    position: relative;
+    height: 220px;
+    width: 150px;
+    margin-left: 1320px;
+    margin-top: -300px;
+    border-radius: 5px;
+    transform: rotate(10deg);
+    
+}
+img.trip3{
+    position: relative;
+    height: 150px;
+    width: 250px;
+    margin-left: 1100px;
+    margin-top: -250px;
+    border-radius: 5px;
+    transform: rotate(10deg);
+}
+.headings {
+    color: var(--heading-color);
+    font-family: "Italiana", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 50px;
+    margin-left: 160px;
+    margin-bottom: 0;
+}
+
+
+.side-headings {
+    color: var(--side-heading);
+    margin-top: 5px;
+    font-family: "Italiana", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+    margin-left: 160px;
+    margin-bottom: 0px;
+}
+
+.content {
+    display: grid;
+    grid-template-rows: 500 px; ;
+}
+
+
+.aarogyam{
+    color: var(--text-color);
+    display: inline-block;
+    font-size: 30px;
+    font-family:  "Montserrat", sans-serif;
+    margin-left: 200px;
+    margin-right: 50px;
+    line-height: 2;         
+    letter-spacing: 0.5px;    
+}
+
+.aarogyam > h3{
+    font-weight: 400;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.aarogyam > p{
+    font-size: 20px;
+    width: 900px;
+    margin-top: 0;
+}
+
+.aroimages {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+img.aro1{
+    position: absolute;
+    height: 150px;
+    width: 200px;
+    margin-left: 1150px;
+    margin-top: -100px;
+    border-radius: 5px;
+    
+}
+img.aro2{
+    position: absolute;
+    height: 180px;
+    width: 230px;
+    margin-left: 1220px;
+    margin-top: -180px;
+    border-radius: 5px;
+    transform: rotate(20deg);
+}
+
+img.aro1:hover{
+    transform: scale(1.05); /* Slightly zooms in on hover */
+}
+
+
+.emotion{
+    color: var(--text-color);
+    font-size: 30px;
+    font-family:  "Montserrat", sans-serif;
+    margin-left: 200px;
+    margin-right: 50px;
+    line-height: 2;         
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+.emotion> h3{
+    font-weight: 400;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.emotion > p{
+    font-size: 20px;
+    width: 900px;
+    margin-top: 0;
+}
+
+
+.space{
+    color: var(--text-color);
+    display: inline-block;
+    font-size: 30px;
+    font-family:  "Montserrat", sans-serif;
+    margin-left: 200px;
+    margin-right: 50px;
+    line-height: 2;         
+    letter-spacing: 0.5px;    
+}
+
+.space > h3{
+    font-weight: 400;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.space > p{
+    font-size: 20px;
+    width: 900px;
+    margin-top: 0;
+}
+
+.spaceimg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+img.space1{
+    position: absolute;
+    height: 150px;
+    width: 250px;
+    margin-left: 850px;
+    margin-top: -130px;
+    border-radius: 5px;
+}
+
+img.space2{
+    position: absolute;
+    height: 130px;
+    width: 280px;
+    margin-left: 1050px;
+    margin-top: -280px;
+    border-radius: 5px;
+    transform: rotate(20deg);
+}
+
+
+.contact{
+    color: var(--text-color);
+    font-size: 30px;
+    font-family:  "Montserrat", sans-serif;
+    margin-left: 200px;
+    margin-right: 50px;
+    line-height: 2;         
+    letter-spacing: 0.5px;
+    height: 300px;
+}
+
+
+.contact > p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.contact > h1{
+    font-size: 60px;
+    margin-left: 1000px;
+    height: 100px;
+}
+
+.gmail{
+    display: inline-block;
+    position: relative;
+    font-size: 18px;
+    margin-left: 984px;
+    color:var(--text-color);
+    margin-top: 20px;
+}
+
+.linkdin{
+    display: inline-block;
+    position: absolute;
+    font-size: 18px;
+    margin-left: 30px;
+    color: var(--text-color);   
+    margin-top: 20px;
+}
+
+
+
+/* From Uiverse.io by andrew-demchenk0 */ 
+#toggle_button {
+    position: fixed;
+    top: 680px; /* Distance from the top */
+    right: 1400px; /* Distance from the right */
+    z-index: 1000; /* Ensures it appears above other elements */
+}
+
+.theme {
+    --bg-color: var(--text-color);
+    --main-color: var(--line-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px; /* Increased for better visibility */
+    height: 30px;
+    background-color: var(--bg-color);
+    border-radius: 100%;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+}
+
+.input {
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    opacity: 0;
+}
+
+.icon {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 16px;
+    height: 16px;
+}
+
+
+.icon.icon-sun {
+    stroke: var(--main-color);
+}
+
+.icon.icon-moon {
+    fill: var(--main-color);
+    display: none;
+}
+
+.input:checked ~ .icon.icon-sun {
+    display: none;
+}
+
+.input:checked ~ .icon.icon-moon {
+    display: block;
+}
+
+.theme:active {
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(3px, 3px);
+}
+
+.ending{
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    left: 0;
+    margin-top: 0;
+    z-index: -1;
+    background: rgb(0,36,162);
+    background: linear-gradient(103deg, var(--animation1st-color) 0%, var(--animation2nd-color) 25%, var(--background-color) 80%);
+}
+
+
+
+
