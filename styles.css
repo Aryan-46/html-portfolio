@@ -9,7 +9,7 @@
     --side-heading : #393E46;
     --text-color : #fff;
     --line-color : #27272a;
-    --animation1st-color : #000e6c;
+    --animation1st-color : #00539b;
     --animation2nd-color : #000841;
 }
 
@@ -472,6 +472,19 @@ img.space2:hover{
     color: var(--text-color);   
     margin-top: 20px;
 }
+
+.ending{
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    left: 0;
+    margin-top: 0;
+    z-index: -1;
+    background: rgb(0,36,162);
+    background: linear-gradient(103deg, var(--animation1st-color) 0%, var(--animation2nd-color) 25%, var(--background-color) 80%);
+}
+
+
 
 
 
