@@ -240,6 +240,23 @@ img.trip3{
     border-radius: 5px;
     transform: rotate(10deg);
 }
+
+img.trip1:hover{
+    transform: scale(1.1); /* Slightly zooms in on hover */
+    z-index: 999;
+    
+}
+
+img.trip2:hover{
+    transform: scale(1.1); /* Slightly zooms in on hover */
+    z-index: 999;
+}
+
+img.trip3:hover{
+    transform: scale(1.1); /* Slightly zooms in on hover */
+    z-index: 999;
+}
+
 .headings {
     color: var(--heading-color);
     font-family: "Italiana", sans-serif;
@@ -320,7 +337,12 @@ img.aro2{
 }
 
 img.aro1:hover{
-    transform: scale(1.05); /* Slightly zooms in on hover */
+    transform: scale(1.1); /* Slightly zooms in on hover */
+}
+
+img.aro2:hover{
+    transform: scale(1.1); /* Slightly zooms in on hover */
+    z-index: 999;
 }
 
 
@@ -393,12 +415,21 @@ img.space2{
     position: absolute;
     height: 130px;
     width: 280px;
-    margin-left: 1050px;
+    margin-left: 1030px;
     margin-top: -280px;
     border-radius: 5px;
     transform: rotate(20deg);
 }
 
+img.space1:hover{
+    transform: scale(1.1); /* Slightly zooms in on hover */
+    z-index: 999;
+}
+
+img.space2:hover{
+    transform: scale(1.1); /* Slightly zooms in on hover */
+    z-index: 999;
+}
 
 .contact{
     color: var(--text-color);
@@ -410,6 +441,7 @@ img.space2{
     letter-spacing: 0.5px;
     height: 300px;
 }
+
 
 
 .contact > p{
@@ -504,18 +536,6 @@ img.space2{
     box-shadow: 0px 0px var(--main-color);
     transform: translate(3px, 3px);
 }
-
-.ending{
-    position: absolute;
-    height: 100px;
-    width: 100%;
-    left: 0;
-    margin-top: 0;
-    z-index: -1;
-    background: rgb(0,36,162);
-    background: linear-gradient(103deg, var(--animation1st-color) 0%, var(--animation2nd-color) 25%, var(--background-color) 80%);
-}
-
 
 
 
