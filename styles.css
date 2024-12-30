@@ -217,7 +217,7 @@ img.trip1{
     height: 200px;
     width: 150px;
     margin-left: 1200px;
-    margin-top: -300px;
+    margin-top: -330px;
     border-radius: 5px;
     
 }
@@ -226,7 +226,7 @@ img.trip2{
     height: 220px;
     width: 150px;
     margin-left: 1320px;
-    margin-top: -300px;
+    margin-top: -330px;
     border-radius: 5px;
     transform: rotate(10deg);
     
@@ -236,7 +236,7 @@ img.trip3{
     height: 150px;
     width: 250px;
     margin-left: 1100px;
-    margin-top: -250px;
+    margin-top: -280px;
     border-radius: 5px;
     transform: rotate(10deg);
 }
@@ -481,7 +481,7 @@ img.space2:hover{
     margin-top: 0;
     z-index: -1;
     background: rgb(0,36,162);
-    background: linear-gradient(103deg, var(--animation1st-color) 0%, var(--animation2nd-color) 25%, var(--background-color) 80%);
+    background: linear-gradient(275deg, var(--animation1st-color) 0%, var(--animation2nd-color) 25%, var(--background-color) 80%);
 }
 
 
